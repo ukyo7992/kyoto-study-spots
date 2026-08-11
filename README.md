@@ -34,3 +34,36 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+# Kyoto Study Spots
+
+京都で勉強・作業しやすい場所を探せるWebアプリ。
+
+## Problem
+
+京都で勉強場所を探すとき、
+Wi-Fi、電源、営業時間、静かさなどの情報が
+複数サイトに分散していて比較しづらい。
+
+## Target User
+
+京都の大学生・社会人・ノマドワーカー。
+
+## Features
+
+- スポット一覧
+- エリア検索
+- Wi-Fiあり/なし
+- 電源あり/なし
+- 静かさ
+- お気に入り
+- レビュー
+
+## Tech Stack
+
+- TypeScript
+- React
+- Next.js
+- PostgreSQL
+- Docker
+- AWS
