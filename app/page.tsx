@@ -67,3 +67,24 @@ export default function Home() {
     </main>
   );
 }
+
+async function getUsers() {
+  try {
+  const response = await fetch(
+    "https://jsonplaceholder.typicode.com/users"
+  );
+
+  if(!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  const users = await response.json();
+  const name = users.filter((user:{name:string})=>user.name.length >= 5).map((user: {name:string})=> user.name);
+  console.log(name);
+} catch (error) {
+
+  console.error("Error fetching users:", error);
+}
+}
+
+getUsers();
