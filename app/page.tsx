@@ -49,10 +49,13 @@ function getWifiArea(spot:Spot[]):Spot[]{
   return spot.filter((spot)=>spot.wifi);
 }
 
-function getSpotByArea(spot:Spot[] , area:Area):Spot[]{
+export function getSpotByArea(spot:Spot[] , area:Area):Spot[]{
   return spot.filter((spot)=>spot.area==area);
 }
 
 function getQuietStudySpots(spot:Spot[]):Spot[]{
   return spot.filter((spot)=> spot.wifi && spot.power && spot.noiseLevel=="quiet");
 }
+
+const karasumaSpots = getSpotByArea(spots,"烏丸");
+console.log(karasumaSpots);
