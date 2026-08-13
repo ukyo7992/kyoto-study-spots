@@ -68,11 +68,3 @@ Wi-Fi、電源、営業時間、静かさなどの情報が
 - Docker
 - AWS
 
-## Development Log
-
-### Day 1
-
-- Set up Next.js with TypeScript
-- Created GitHub repository
-- Defined initial product concept
-- Implemented static study spot list
