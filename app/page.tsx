@@ -1,25 +1,17 @@
-import { spots } from "../components/SpotList";
 import {Header} from "../components/Header";
-import { SpotCard} from "@/components/SpotCard";
-
-
+import { ShowFilterAnswer } from "@/components/SpotFilter";
+import { Searchbar } from "../components/searchBar";
+import { SearchByArea } from "@/components/SwarchByArea";
 
 export default function Home(){
+
   return (
     <main>
       <Header />
-      {spots.map((spot)=>(
-        <SpotCard
-          key={spot.id}
-          name={spot.name}
-          area={spot.area}
-          wifi={spot.wifi}
-          power={spot.power}
-          quiet={spot.quiet}
-          openUntil={spot.openUntil}
-        />
-      ))}
-
+      <Searchbar />
+      <SearchByArea />
+      <ShowFilterAnswer />
+    
     </main>
   );
 }

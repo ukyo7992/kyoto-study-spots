@@ -4,6 +4,11 @@ main {
   padding: 24px;
 }
 
+section{
+  margin: 0 auto;
+  padding: 10px;
+}
+
 .spot-card {
   border: 1px solid #888;
   border-radius: 10px;

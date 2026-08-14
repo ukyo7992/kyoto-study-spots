@@ -5,7 +5,7 @@ export function Header(){
         <>
         
             <h1> Kyoto Study Spots</h1>
-            <p>Find your study place in Kyoto</p>
+            <h2>Find your study place in Kyoto</h2>
             
         </>
     );
