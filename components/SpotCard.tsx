@@ -4,24 +4,24 @@ type SpotCardProps = {
   spot: Spot;
 };
 
-export default function SpotCard({
-  spot,
-}: SpotCardProps) {
+export default function SpotCard({ spot }: SpotCardProps) {
   return (
-    <article>
-      <h2>{spot.name}</h2>
+    <div className="spot-card">
+      <article>
+        <h2>{spot.name}</h2>
 
-      <p>エリア: {spot.area}</p>
+        <p>エリア: {spot.area}</p>
 
-      <p>
-        Wi-Fi:
-        {spot.wifi ? "あり" : "なし"}
-      </p>
+        <p>
+          Wi-Fi:
+          {spot.wifi ? "あり" : "なし"}
+        </p>
 
-      <p>
-        電源:
-        {spot.power ? "あり" : "なし"}
-      </p>
-    </article>
+        <p>
+          電源:
+          {spot.power ? "あり" : "なし"}
+        </p>
+      </article>
+    </div>
   );
 }
