@@ -1,19 +1,25 @@
-import { spot } from "../data/spots";
+import { spots } from "../components/SpotList";
+import {Header} from "../components/Header";
+import { SpotCard} from "@/components/SpotCard";
+
+
 
 export default function Home(){
   return (
     <main>
+      <Header />
+      {spots.map((spot)=>(
+        <SpotCard
+          key={spot.id}
+          name={spot.name}
+          area={spot.area}
+          wifi={spot.wifi}
+          power={spot.power}
+          quiet={spot.quiet}
+          openUntil={spot.openUntil}
+        />
+      ))}
 
-      <h1>  Kyoto Study Spots</h1>
-      
-      {
-        spot.map((spot)=>(
-          <div key={spot.id}>
-            <h2>{spot.name}</h2>
-            <p>{spot.area}</p>
-          </div>
-        ))
-      }
     </main>
   );
 }
