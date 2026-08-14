@@ -1,29 +1,27 @@
-//A card of cafe
-export type Area = "京都" | "烏丸" | "河原町" | "出町柳";
-export type Quietness = "quiet" | "moderate" | "loud";
+import type { Spot } from "../types/Spot";
 
-export type SpotCardProps = {
-    name:string,
-    area:Area,
-    wifi: boolean,
-    power: boolean,
-    quiet: Quietness,
-    openUntil: string;
-}
-
-export type Spot = SpotCardProps & {
-    id:number;
+type SpotCardProps = {
+  spot: Spot;
 };
 
-export function SpotCard(spot:SpotCardProps){
-    return (
-        <article className="spot-card">      
-            <h2>{spot.name}</h2>
-            <p>{spot.area}</p>
-            <p>{spot.wifi?"wifiあり":"wifiなし"}</p>
-            <p>{spot.power?"充電スポットあり":"充電スポットなし"}</p>
-            <p>{spot.quiet}</p>
-            <p>{spot.openUntil}</p>
-        </article>
-    );
+export default function SpotCard({
+  spot,
+}: SpotCardProps) {
+  return (
+    <article>
+      <h2>{spot.name}</h2>
+
+      <p>エリア: {spot.area}</p>
+
+      <p>
+        Wi-Fi:
+        {spot.wifi ? "あり" : "なし"}
+      </p>
+
+      <p>
+        電源:
+        {spot.power ? "あり" : "なし"}
+      </p>
+    </article>
+  );
 }

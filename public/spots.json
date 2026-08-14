@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "京都府立図書館",
+    "area": "岡崎",
+    "wifi": true,
+    "powerOutlet": false
+  },
+  {
+    "id": 2,
+    "name": "京都市中央図書館",
+    "area": "丸太町",
+    "wifi": true,
+    "powerOutlet": true
+  },
+  {
+    "id": 3,
+    "name": "京都駅 Study Spot",
+    "area": "京都駅",
+    "wifi": false,
+    "powerOutlet": true
+  }
+]

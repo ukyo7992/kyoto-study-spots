@@ -1,32 +1,25 @@
-import { Spot } from "./SpotCard";
+import type { Spot } from "../types/Spot";
+import SpotCard from "./SpotCard";
 
+type SpotListProps = {
+  spots: Spot[];
+};
 
-export const spots: Spot[] = [
-  {
-    id:1,
-    name: "京都府立図書館",
-    area: "京都",
-    wifi: true,
-    power: false,
-    quiet: "moderate",
-    openUntil:"22:00"
-  },
-  {
-    id:2,
-    name: "Study Spot Karasuma",
-    area: "烏丸",
-    wifi:false,
-    power: false,
-    quiet: "loud",
-    openUntil:"00:00"
-  },
-  {
-    id:3,
-    name: "Cafe Kawaramachi",
-    area: "河原町",
-    wifi:true,
-    power: true,
-    quiet: "quiet",
-    openUntil:"18:00"
-  },
-];
+export default function SpotList({
+  spots,
+}: SpotListProps) {
+  if (spots.length === 0) {
+    return <p>該当するスポットがありません。</p>;
+  }
+
+  return (
+    <div>
+      {spots.map((spot) => (
+        <SpotCard
+          key={spot.id}
+          spot={spot}
+        />
+      ))}
+    </div>
+  );
+}
