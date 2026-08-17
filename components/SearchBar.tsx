@@ -1,15 +1,15 @@
 type SearchBarProps = {
-  value: string;
-  onChange: (value: string) => void;
+  keyword: string;
+  onKeywordChange: (keyword: string) => void;
 };
 
-export default function SearchBar({value,onChange,}: SearchBarProps) {
+export default function SearchBar({keyword,onKeywordChange,}: SearchBarProps) {
   return (
     <input
       type="text"
-      value={value}
-      onChange={(event) => onChange(event.target.value)}
+      value={keyword}
       placeholder="スポットを検索"
+      onChange={(event) => onKeywordChange(event.target.value)}
     />
   );
 }
